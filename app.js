@@ -23,6 +23,10 @@ const getResult = (cityName) => {
 }
 
 const result = (result) => {
+    // let icon1 = result.weather[0].icon;
+    // let icon = document.querySelector('.img')
+    // icon.innerHTML = `<img src="icons/${icon1}.png"/>`
+
     let city = document.querySelector('.city')
     city.innerText = `${result.name}, ${result.sys.country}`
 
