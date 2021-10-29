@@ -5,27 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+<!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
-    <div class="app">
-        <div class="header">
-            <h1>Väder Prognos</h1>
-            <input type="text" id="searchBar" placeholder="Ange Stad...">
-            <button id="locationbutton">OK</button>
-            <div class="erroorMessage"></div>
+    <header> 
+        <img class="logo" src="logo/New Project_100px.png" alt="">
+        <div id="searchBar_div">
+            <input type="text" id="searchBar" placeholder="Sök stad">
+            <img class="magnifying-glass" src="images/magnifying-glass_24px_02.png" alt="">
         </div>
+        <div class="menu_div">
+            <img class="menu" src="images/menu.png" alt="" srcset="">
+        </div>
+    </header>
+        <div id="locationbutton_div">
+            <button id="locationbutton">Min plats</button>
+        </div>
+    <div class="app">
         <div class="content">
             <div class="city"></div>
+            <img class="icon" src="" alt="">
             <div class="temp"></div>
             <div class="desc"></div>
             <div class="minmax"></div>
         </div>
     </div>
 
-    <script src="/app.js"></script>
+    <script src="app.js"></script>
     <script src="geo.js"></script>
 </body>
 

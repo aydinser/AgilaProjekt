@@ -23,11 +23,7 @@ const getResult = (cityName) => {
 }
 
 const result = (result) => {
-    // let icon1 = result.weather[0].icon;
-    // let icon = document.querySelector('.img')
-    // icon.innerHTML = `<img src="icons/${icon1}.png"/>`
-
-    let city = document.querySelector('.city')
+    const city = document.querySelector('.city')
     city.innerText = `${result.name}, ${result.sys.country}`
 
     const temp = document.querySelector('.temp')
@@ -36,6 +32,28 @@ const result = (result) => {
 
     const desc = document.querySelector('.desc')
     desc.innerText = `${result.weather[0].description}`
+
+
+    const id = `${result.weather[0].id}`;
+    const icon = document.querySelector('.icon');
+    console.log(id)
+
+  if (id == "800"){
+    icon.src = "images/forecast/klart.png"
+  }else if(id >= 801 && id <= 804){
+    icon.src = "images/forecast/mulet.png"
+  }else if(id >= 701 && id <= 781){
+    icon.src = "images/forecast/dimma.png"
+  }else if(id >= 600 && id <= 622){
+    icon.src = "images/forecast/snö.png"
+  }else if(id >= 300 && id <= 321){
+    icon.src = "images/forecast/regn.png"
+  }else if(id >= 200 && id <= 232){
+    icon.src = "images/forecast/storm.png"
+  }else {
+    icon.src = "#";
+  }
+
 
     const minmax = document.querySelector('.minmax')
     minmax.innerText = `${Math.round(result.main.temp_min)}°/ ${Math.round(result.main.temp_max)}°`
